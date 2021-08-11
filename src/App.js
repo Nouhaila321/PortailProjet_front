@@ -1,43 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
-import axios from 'axios'
+import './style/App.css'
 import { Component } from 'react';
 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-const api = axios.create({
-  baseURL: `https://localhost:44378/api/Clients`
-})
+import PrincipalePage from './component/PrincipalePage';
+import Projet from './component/Projet';
+import Navbar from './component/Navbar';
+import ListeProjets from './component/ListeProjets';
 
 
 class App extends Component {
-  
-  constructor() {
-    super();
-    
-    api.get('/').then(res => {
-      console.log(res.data)
-
-    })
-  }
-
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <Navbar />
+        <Switch>
+            <Route exact path='/'>
+              <PrincipalePage />
+            </Route>
+            
+            <Route exact path={[
+                '/projets',
+                '/projets/:type',
+              ]}>
+              <ListeProjets/>
+            </Route>
+
+            <Route exact path={[
+                '/projet:id',
+                '/projet',
+              ]}>
+                <Projet/>
+            </Route>
+            
+        </Switch>
+
+      </Router>
     );
   }
 }
