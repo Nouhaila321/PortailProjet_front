@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+.flex{
+  display: flex;
+  
+  }
+  .flex1{
+      margin-top: 2%;
+      width: 60%;
+      justify-content: space-between;
+      align-content: stretch;
+      
+  }
+  
+  .flex2{
+     
+      width: 40%;
+  }
+  
+  .title{
+      width: 150%;
+      margin-bottom: 1%;
+      
+  }
+  .table{
+    margin-top: 10%;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  
+  
