@@ -3,10 +3,14 @@ import { Component } from 'react';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import PrincipalePage from './component/PrincipalePage';
 import Projet from './component/Projet';
+import Client from './component/Client';
+import Collaborateur from './component/Collaborateur';
+
+import PrincipalePage from './component/PrincipalePage';
 import Navbar from './component/Navbar';
 import ListeProjets from './component/ListeProjets';
+
 
 
 class App extends Component {
@@ -27,10 +31,24 @@ class App extends Component {
             </Route>
 
             <Route exact path={[
-                '/projet:id',
+                '/projet/:idP/:idC',
                 '/projet',
               ]}>
                 <Projet/>
+            </Route>
+
+            <Route exact path={[
+                '/client/:idC',
+                
+              ]}>
+                <Client/>
+            </Route>
+
+            <Route exact path={[
+                '/Collaborateur/:idCollab',
+                
+              ]}>
+                <Collaborateur/>
             </Route>
             
         </Switch>

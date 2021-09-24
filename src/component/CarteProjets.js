@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import {  Redirect } from 'react-router-dom';
@@ -54,7 +54,7 @@ function CarteProjets() {
                                     Projets Ferroviaires
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    Lizards are a widespread group of squamate reptiles
+                                    Liste des projets ayant relation avec le domaine ferroviaire
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
@@ -76,7 +76,7 @@ function CarteProjets() {
                                     Projets Bancaires
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    Lizards are a widespread group of squamate reptiles
+                                    Liste des projets ayant relation avec le domaine bancaire
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
@@ -98,7 +98,7 @@ function CarteProjets() {
                                     Projets Maritimes
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    Lizards are a widespread group of squamate reptiles
+                                    Liste des projets ayant relation avec le domaine maritime
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
